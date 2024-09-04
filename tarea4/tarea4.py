@@ -143,44 +143,39 @@ class SmartPhone:
         return f"{self.marca} {self.modelo} (${self.precio})"
 
 
-
 def main():
-    #Creamos la lista ligada
+
     lista_smartphones = ListaLigada()
 
-    # Agregar 5 Smart Phone
-    lista_smartphones.agregar_al_final(SmartPhone("Apple", "iPhone 12", 999))
-    lista_smartphones.agregar_al_final(SmartPhone("Samsung", "Galaxy S21", 799))
-    lista_smartphones.agregar_al_final(SmartPhone("Google", "Pixel 5", 699))
-    lista_smartphones.agregar_al_final(SmartPhone("OnePlus", "8 Pro", 899))
-    lista_smartphones.agregar_al_final(SmartPhone("Sony", "Xperia 5 II", 949))
 
-    #  Imprimir el contenido.
+    lista_smartphones.agregar_al_final(SmartPhone("Huawei", "Mate 40 Pro", 1099))
+    lista_smartphones.agregar_al_final(SmartPhone("Xiaomi", "Redmi Note 10", 199))
+    lista_smartphones.agregar_al_final(SmartPhone("Google", "Pixel 6", 599))
+    lista_smartphones.agregar_al_final(SmartPhone("Apple", "iPhone 13 Pro", 999))
+    lista_smartphones.agregar_al_final(SmartPhone("Samsung", "Galaxy Z Fold 3", 1799))
+
     print("Lista de smartphones:")
     lista_smartphones.head.transversal()
 
-    # Eliminar el de la posición 2.
+
     lista_smartphones.eliminar(2)
 
-    # Volver a imprimir el contenido.
     print("\nLista después de eliminar el tercer smartphone:")
     lista_smartphones.head.transversal()
 
-    # Actualizar el segundo elemento.
-    lista_smartphones.actualizar(SmartPhone("Samsung", "Galaxy S21", 799), SmartPhone("Huawei", "P40 Pro", 699))
 
-    # Agregar un elemento al inicio y otro diferente al final.
-    lista_smartphones.agregar_al_inicio(SmartPhone("Nokia", "3310", 59))
-    lista_smartphones.agregar_al_final(SmartPhone("Xiaomi", "Mi 11", 749))
+    lista_smartphones.actualizar(SmartPhone("Xiaomi", "Redmi Note 10", 199), SmartPhone("OnePlus", "9 Pro", 969))
 
-    # Volver a imprimir el contenido.
+
+    lista_smartphones.agregar_al_inicio(SmartPhone("Sony", "Xperia 1 III", 1199))
+    lista_smartphones.agregar_al_final(SmartPhone("Motorola", "Edge 20 Pro", 699))
+
     print("\nLista después de agregar un smartphone al inicio y otro al final:")
     lista_smartphones.head.transversal()
 
-    # eliminar el primero.
+
     lista_smartphones.eliminar_el_primero()
 
-    # Volver a imprimir el contenido.
     print("\nLista después de eliminar el primer smartphone:")
     lista_smartphones.head.transversal()
 
