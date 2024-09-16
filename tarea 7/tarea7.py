@@ -61,12 +61,19 @@ class Clinica:
         else:
             return "Hay pacientes esperando"
 
+    def mostrar_siguiente(self):
+        if not self.colaMedica.esta_vacia():
+            print(f"El siguiente paciente es: {self.colaMedica.frente()}")
+        else:
+            print("No hay pacientes en la cola")
+
 if __name__ == "__main__":
     clinica = Clinica()
     clinica.registrar_paciente("Neftaly")
     clinica.registrar_paciente("Maria")
     clinica.registrar_paciente("Isaac")
     clinica.mostrar_estado()
+    clinica.mostrar_siguiente()
     clinica.atender_paciente_prioritario()
     clinica.mostrar_estado()
     clinica.registrar_paciente("Carmen")
