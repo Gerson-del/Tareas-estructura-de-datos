@@ -122,9 +122,6 @@ def start():
 
     canvas_area.bind("<Button-1>", change_wall)
 
-    wall_button = tk.Button(button_frame, text="agregar_pared", command=lambda: toggle_mode("agregar_pared"), bg="lightblue", padx=10)
-    wall_button.grid(row=0, column=0, padx=10, pady=5)
-
     solve_button = tk.Button(button_frame, text="resolver", command=lambda: execute_solver(maze_setup, entry_point, exit_point), bg="lightgreen", padx=10)
     solve_button.grid(row=0, column=1, padx=10, pady=5)
 
